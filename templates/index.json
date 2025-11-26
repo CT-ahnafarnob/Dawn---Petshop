@@ -101,9 +101,9 @@
       "type": "ct-custom-product-carousel",
       "name": "CT-Product Carousel",
       "settings": {
-        "selected_collection": "",
+        "selected_collection": "new-arrivals",
         "background_color": "#fef6f2",
-        "heading": "Best Sellers",
+        "heading": "",
         "heading_level": "h1",
         "heading_color": "#765220",
         "btn_text": "Shop Best Sellers",
