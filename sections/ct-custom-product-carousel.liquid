@@ -25,11 +25,11 @@
     font-size: 60px;
     line-height:1;
     font-weight: 400;
-    width: 50%;
+    min-width: 20%;
     margin-bottom: 20px;
     margin-top: 5px;
-    margin: 0;
-    padding: 20px;
+ 
+    text-wrap: no-wrap;
 } 
 
 
@@ -169,7 +169,12 @@
   color: #f0773f !important;
 }
 
+@media (max-width: 998px) {
+   .{{section.id}} .fourth-sec-heading :is(h1, h2, h3, h4, h5, h6) {
+    min-width: 25%;
 
+} 
+}
 
 @media (max-width: 768px) {
   /* Fourth Section */
@@ -185,15 +190,17 @@
   }
 
   .{{section.id}} .fourth-sec-heading :is(h1, h2, h3, h4, h5, h6) {
-    width: 100%;
+    width: 90%;
     margin: 0;
     padding: 0px;
     flex-shrink: 0;
+    text-align: center;
+    font-size: 50px;
 } 
 
 
   .fourth-sec-heading p {
-    padding: 0;
+    padding: 0px 20px;
     text-align: justify;
     font-size: 14px;
   }
