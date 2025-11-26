@@ -1,0 +1,104 @@
+:root {
+  --Montserrat-font: "Montserrat";
+  --Kalam-font: "Kalam";
+  --btn-color: #fa9d72;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("https://cdn.shopify.com/s/files/1/0941/8362/0977/files/Montserrat-Regular.woff2?v=1764093722")
+      format("woff2"),
+    url("https://cdn.shopify.com/s/files/1/0941/8362/0977/files/Montserrat-Regular.woff?v=1764093722")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kalam";
+  src: url("https://cdn.shopify.com/s/files/1/0941/8362/0977/files/Kalam-Regular.woff2?v=1764093722")
+      format("woff2"),
+    url("https://cdn.shopify.com/s/files/1/0941/8362/0977/files/Kalam-Regular.woff?v=1764093721")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.custom-page-width {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--txt-color);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--Kalam-font);
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Reusable Button */
+.btn {
+  background-color: var(--btn-color);
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  padding: 10px 40px;
+  border-radius: 5px;
+  font-size: 15px;
+  border: 2px solid var(--btn-color);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 51%;
+  height: 100%;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 51%;
+  height: 100%;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+
+.btn:hover::before,
+.btn:hover::after {
+  transform: scaleX(1);
+}
+
+.btn:hover {
+  color: var(--btn-color) !important;
+}

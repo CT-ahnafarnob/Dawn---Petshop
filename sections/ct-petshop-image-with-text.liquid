@@ -1,0 +1,262 @@
+{{ 'CT-custom.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign heading_tag = section.settings.heading_level | default: 'h1'
+  assign heading = section.settings.heading
+  assign heading_color = section.settings.heading_color
+  assign heading_font_style = section.settings.heading_font_style
+  assign heading_text_alignment = section.settings.heading_text_alignment
+  assign rich_text_color = section.settings.rich_text_color
+  assign background_color = section.settings.background_color
+  assign content = section.settings.content 
+  assign font_size = section.settings.font_size
+  assign btn_url = section.settings.btn_url
+  assign btn_text = section.settings.btn_text
+  assign btn_color = section.settings.btn_color
+  assign btn_txt_color = section.settings.btn_txt_color
+  assign layout_direction = section.settings.layout_direction
+%}
+<style>
+    /* First section */
+.{{section.id}} {
+    background-color: {{background_color}};
+    
+}
+
+.{{section.id}} :is(h1, h2, h3, h4, h5, h6) {
+    color: {{heading_color}}; 
+    /* font-style:{{heading_font_style}}; */
+    text-align:{{heading_text_alignment}};
+    font-size: 60px;
+    line-height:1;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+} 
+
+.first-section {
+  padding: 10px 30px;
+  text-align: center;
+}
+
+
+.{{section.id}}  .first-section-inner__left p {
+    color: {{rich_text_color}};
+    font-size: {{font_size}}px;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+}
+
+
+.first-section__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: {{layout_direction}};
+}
+
+.first-section-inner__left,
+.first-section-inner__right {
+    flex: 1;
+}
+@media (max-width: 768px) {
+.first-section__inner {
+    flex-direction: column-reverse;
+  }
+
+  .first-section__inner h1 {
+    line-height: 1;
+    font-size: 30px;
+    margin-top: 10px;
+  }
+  .{{section.id}}  .first-section-inner__left p {
+    font-size: 16px;
+   
+}
+ .{{section.id}}  .btn {
+    font-size: 12px;
+     padding: 5px 30px;
+ }
+}
+</style>
+<section class="{{section.id}}">
+     <div class="first-section custom-page-width">
+        <div class="first-section__inner">
+          <div class="first-section-inner__left">
+              {% if heading_tag != blank %}
+                    <{{heading_tag}}>{{heading}}</{{heading_tag}}>
+                   {% else %}
+                     <h1>{{heading}}</h1>
+                {% endif %}
+          
+                {% comment %} content {% endcomment %}
+              {% if content != blank %}
+                   <p>{{content}}</p> 
+                {% endif %}
+                    {% if btn_text != blank and btn_url != blank%}
+                    <a class="btn" style="background-color: {{btn_color}}; color:{{btn_txt_color}}" href="{{btn_url}}">{{btn_text}}</a>
+                {% endif %}
+          </div>
+          <div class="first-section-inner__right">
+                   {% if section.settings.image != blank %}
+               <img src="{{ section.settings.image | image_url }}" alt="" width="100%" height="100%">
+                {% else %}
+                    <img src="https://cdn.shopify.com/s/files/1/0941/8362/0977/files/section-1-image.png?v=1764096405" 
+                    alt="image" width="100%" height="100%">
+            {% endif %}
+          
+          </div>
+        </div>
+      </div>
+</section>
+
+{% schema %}
+
+{
+    "name": "Image with Text",
+    "disabled_on": {
+        "groups": ["header", "footer"]
+    },
+    "settings": [
+            {
+              "type": "header",
+              "content": "Section Settings"
+            },
+            {
+                "type": "color",
+                 "id": "background_color",
+                 "label": "Section Background Color",
+                 "default": "#fef6f2"
+            },
+            {   
+                "type": "image_picker",
+                "id": "image",
+                "label": "Change Image"
+            },
+           
+            {
+                "type": "header",
+                "content": "Heading Typography"
+            },
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Write Heading",
+                "default":"Cute Meets Functional"
+            },
+            {
+                "type": "select",
+                "id": "heading_level",
+                "label": "Heading level",
+                "default": "h1",
+                "options": 
+                [
+                    { "value": "h1", "label": "H1" },
+                    { "value": "h2", "label": "H2" },
+                    { "value": "h3", "label": "H3" },
+                    { "value": "h4", "label": "H4" },
+                    { "value": "h5", "label": "H5" },
+                    { "value": "h6", "label": "H6" }
+                ]
+            },
+            {
+                "type": "color",
+                "id": "heading_color",
+                "label": "Heading color",
+                "default":"#765220"
+            },
+            {
+                "type": "select",
+                "id": "heading_text_alignment",
+                "label": "Heading Text Alignment",
+                "options": [
+                    {
+                        "value": "left",
+                        "label": "Left"
+                    },
+                    {
+                        "value": "center",
+                        "label": "Center"
+                    },
+                    {
+                        "value": "right",
+                        "label": "Right"
+                    }
+                ],
+                "default": "center"
+            },
+            {
+                "type": "header",
+                "content": "Description Typography"
+            },
+            {
+                "type": "richtext",
+                "id": "content",
+                "label": "Write Description",
+                "default":"<p>Bags and accessories made to make you smile!</p>"
+
+            },
+            {
+                "type": "range",
+                "id": "font_size",
+                "min": 12,
+                "max": 24,
+                "step": 1,
+                "unit": "px",
+                "label": "Font size",
+                "default": 20
+            },
+            {
+                "type": "color",
+                "id": "rich_text_color",
+                "label": "Description text color",
+                "default":"#765220"
+            },
+            {
+                "type": "header",  
+                "content": "Button Config"
+
+            },
+            {
+                "type": "text",
+                "id": "btn_text",
+                "label": "Button Text"
+               
+            },
+            {
+                "type": "color",
+                "id": "btn_txt_color",
+                "label": "Button Text Color",
+                "default":"#ffffff"
+            }, 
+            {
+                "type": "url",
+                "id": "btn_url",
+                "label": "Button URL"
+            },
+            {
+                "type": "color",
+                "id": "btn_color",
+                "label": "Button Background Color",
+                "default":"#fa9d72"
+            },
+            {
+                "type": "select",
+                "id": "layout_direction",
+                "label": "Layout Direction",
+                "options": [
+                    { "value": "row", "label": "Image Left, Text Right" },
+                    { "value": "row-reverse", "label": "Image Right, Text Left" }
+                ],
+                "default": "row"
+            }          
+        ],
+        "presets": [
+            {
+                "name": "CT-Image with Text",
+                "category": "Custom Section"
+            }
+        ]
+}
+{% endschema %}
