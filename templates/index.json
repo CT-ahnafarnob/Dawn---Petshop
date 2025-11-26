@@ -35,36 +35,37 @@
         "heading",
         "button"
       ],
+      "disabled": true,
       "settings": {
         "image_overlay_opacity": 40,
         "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
         "image_behavior": "none",
+        "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
+        "show_text_box": false,
         "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
         "show_text_below": false
       }
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
+        "collection": "all",
+        "products_to_show": 8,
         "title": "Featured products",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
+        "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
+        "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -72,13 +73,54 @@
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 44,
         "padding_bottom": 36
+      }
+    },
+    "ct_petshop_image_with_text_GTX8fF": {
+      "type": "ct-petshop-image-with-text",
+      "name": "CT-Image with Text",
+      "settings": {
+        "background_color": "#fef6f2",
+        "heading": "Cute Meets Functional",
+        "heading_level": "h1",
+        "heading_color": "#765220",
+        "heading_text_alignment": "center",
+        "content": "<p>Bags and accessories made to make you smile!</p>",
+        "font_size": 20,
+        "rich_text_color": "#765220",
+        "btn_text": "",
+        "btn_txt_color": "#ffffff",
+        "btn_url": "",
+        "btn_color": "#fa9d72",
+        "layout_direction": "row"
+      }
+    },
+    "ct_custom_product_carousel_iYFNQd": {
+      "type": "ct-custom-product-carousel",
+      "name": "CT-Product Carousel",
+      "settings": {
+        "selected_collection": "new-arrivals",
+        "background_color": "#fef6f2",
+        "heading": "",
+        "heading_level": "h1",
+        "heading_color": "#765220",
+        "btn_text": "Shop Best Sellers",
+        "btn_txt_color": "#ffffff",
+        "btn_url": "",
+        "btn_color": "#fa9d72",
+        "content": "<p>Take a peek at some of our most popular items! These cute, waterproof bags and accessories are made with the best materials. Our unique designs come in a wide variety of prints and styles, so you can bring your fun fashion sense with you no matter the occasion or give a cute Corgi present to a fellow dog lover!</p>",
+        "font_size": 20,
+        "rich_text_color": "#765220",
+        "layout_direction": "row"
       }
     }
   },
   "order": [
     "image_banner",
-    "featured_collection"
+    "featured_collection",
+    "ct_petshop_image_with_text_GTX8fF",
+    "ct_custom_product_carousel_iYFNQd"
   ]
 }
