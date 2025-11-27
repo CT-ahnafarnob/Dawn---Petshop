@@ -239,7 +239,7 @@
           {% if heading_tag != blank and  heading == blank %}
                       <{{heading_tag}}>{{collection.title}}</{{heading_tag}}>
                     {% else %}
-                      <h1>{{heading}}</h1>
+                      <{{heading_tag}}>{{heading}}</{{heading_tag}}>
                   {% endif %}
               {% if content != blank %}
            <p>
