@@ -262,6 +262,9 @@
           </div>
 
              <div class = "fourth-sec-right">
+              {% if collection == blank %}
+                                <h1 style="color: #765220; padding: 0 30px;">Please Select A Collection First</h1>
+                            {% endif %}
                {% if collection.products.size > 0 %}
                  <div class="demo">
                   {% for product in collection.products %}
