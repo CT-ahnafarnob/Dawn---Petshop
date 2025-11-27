@@ -97,13 +97,13 @@
         "layout_direction": "row"
       }
     },
-    "ct_custom_product_carousel_iYFNQd": {
+    "ct_custom_product_carousel_twRV7B": {
       "type": "ct-custom-product-carousel",
       "name": "CT-Product Carousel",
       "settings": {
         "selected_collection": "new-arrivals",
         "background_color": "#fef6f2",
-        "heading": "",
+        "heading": "Best Sellers",
         "heading_level": "h1",
         "heading_color": "#765220",
         "btn_text": "Shop Best Sellers",
@@ -121,6 +121,6 @@
     "image_banner",
     "featured_collection",
     "ct_petshop_image_with_text_GTX8fF",
-    "ct_custom_product_carousel_iYFNQd"
+    "ct_custom_product_carousel_twRV7B"
   ]
 }
