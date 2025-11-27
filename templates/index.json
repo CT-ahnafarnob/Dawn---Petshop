@@ -216,6 +216,26 @@
         "btn_color": "#fa9d72",
         "layout_direction": "row"
       }
+    },
+    "ct_petshop_image_with_text_rFzVqi": {
+      "type": "ct-petshop-image-with-text",
+      "name": "CT-Image with Text",
+      "settings": {
+        "background_color": "#fef6f2",
+        "image": "shopify://shop_images/third-grid-1.jpg",
+        "heading": "Wholesale Bags & Accessories",
+        "heading_level": "h1",
+        "heading_color": "#765220",
+        "heading_text_alignment": "center",
+        "content": "<p>Elevate your shop with our curated line of waterproof bags and playful everyday accessories. Our wholesale collection combines charm, quality, and functionality to delight customers of all ages.</p>",
+        "font_size": 20,
+        "rich_text_color": "#765220",
+        "btn_text": "Apply for Wholesale",
+        "btn_txt_color": "#ffffff",
+        "btn_url": "shopify://pages/about-us",
+        "btn_color": "#fa9d72",
+        "layout_direction": "row-reverse"
+      }
     }
   },
   "order": [
@@ -225,6 +245,7 @@
     "ct_custom_product_carousel_gKTFXi",
     "ct_custom_all_collection_JFNQM7",
     "ct_custom_product_carousel_mJaC6X",
-    "ct_petshop_image_with_text_ccYYRP"
+    "ct_petshop_image_with_text_ccYYRP",
+    "ct_petshop_image_with_text_rFzVqi"
   ]
 }
