@@ -116,12 +116,74 @@
         "rich_text_color": "#765220",
         "layout_direction": "row"
       }
+    },
+    "ct_custom_all_collection_JFNQM7": {
+      "type": "ct-custom-all-collection",
+      "blocks": {
+        "collection_item_zhgAPH": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "new-arrivals",
+            "collection_image": "shopify://shop_images/third-grid-1.jpg"
+          }
+        },
+        "collection_item_QMXK98": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "all-products",
+            "collection_image": "shopify://shop_images/3rd-grid.png"
+          }
+        },
+        "collection_item_eqdADL": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "frontpage",
+            "collection_image": "shopify://shop_images/fourth.png"
+          }
+        },
+        "collection_item_MqTQx7": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "frontpage",
+            "collection_image": "shopify://shop_images/product-1.jpg"
+          }
+        },
+        "collection_item_HgdpGk": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "demo-collection",
+            "collection_image": "shopify://shop_images/second-section-left.jpg"
+          }
+        },
+        "collection_item_YPCKNa": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "test-collection",
+            "collection_image": "shopify://shop_images/third-grid-3.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "collection_item_zhgAPH",
+        "collection_item_QMXK98",
+        "collection_item_eqdADL",
+        "collection_item_MqTQx7",
+        "collection_item_HgdpGk",
+        "collection_item_YPCKNa"
+      ],
+      "name": "Ct Collection Showcase",
+      "settings": {
+        "header": "Explore the Cuteness!",
+        "header_font_size": 60,
+        "mobile_header_font_size": 20
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
     "ct_petshop_image_with_text_GTX8fF",
-    "ct_custom_product_carousel_gKTFXi"
+    "ct_custom_product_carousel_gKTFXi",
+    "ct_custom_all_collection_JFNQM7"
   ]
 }
