@@ -97,7 +97,7 @@
         "layout_direction": "row"
       }
     },
-    "ct_custom_product_carousel_r3JtAC": {
+    "ct_custom_product_carousel_gKTFXi": {
       "type": "ct-custom-product-carousel",
       "name": "CT-Product Carousel",
       "settings": {
@@ -106,73 +106,15 @@
         "heading": "Best Sellers",
         "heading_level": "h1",
         "heading_color": "#765220",
+        "image": "shopify://shop_images/second-section-left.jpg",
         "btn_text": "Shop Best Sellers",
         "btn_txt_color": "#ffffff",
-        "btn_url": "",
+        "btn_url": "shopify://collections/new-arrivals",
         "btn_color": "#fa9d72",
         "content": "<p>Take a peek at some of our most popular items! These cute, waterproof bags and accessories are made with the best materials. Our unique designs come in a wide variety of prints and styles, so you can bring your fun fashion sense with you no matter the occasion or give a cute Corgi present to a fellow dog lover!</p>",
         "font_size": 20,
         "rich_text_color": "#765220",
         "layout_direction": "row"
-      }
-    },
-    "ct_custom_all_collection_9qLTng": {
-      "type": "ct-custom-all-collection",
-      "blocks": {
-        "collection_item_Fabwxc": {
-          "type": "collection_item",
-          "settings": {
-            "collection": "new-arrivals-ggblue",
-            "collection_image": "shopify://shop_images/third-grid-1.jpg"
-          }
-        },
-        "collection_item_fkRx4q": {
-          "type": "collection_item",
-          "settings": {
-            "collection": "new-arrivals",
-            "collection_image": "shopify://shop_images/3rd-grid.png"
-          }
-        },
-        "collection_item_R3q7mN": {
-          "type": "collection_item",
-          "settings": {
-            "collection": "demo-collection",
-            "collection_image": "shopify://shop_images/third-grid-3.jpg"
-          }
-        },
-        "collection_item_cxTNeB": {
-          "type": "collection_item",
-          "settings": {
-            "collection": "snow-boards",
-            "collection_image": "shopify://shop_images/grid1.webp"
-          }
-        },
-        "collection_item_GdYqf7": {
-          "type": "collection_item",
-          "settings": {
-            "collection": "new-arrivals"
-          }
-        },
-        "collection_item_zfUMFD": {
-          "type": "collection_item",
-          "settings": {
-            "collection": "all-products"
-          }
-        }
-      },
-      "block_order": [
-        "collection_item_Fabwxc",
-        "collection_item_fkRx4q",
-        "collection_item_R3q7mN",
-        "collection_item_cxTNeB",
-        "collection_item_GdYqf7",
-        "collection_item_zfUMFD"
-      ],
-      "name": "Ct Collection Showcase",
-      "settings": {
-        "header": "Explore the Cuteness!",
-        "header_font_size": 60,
-        "mobile_header_font_size": 20
       }
     }
   },
@@ -180,7 +122,6 @@
     "image_banner",
     "featured_collection",
     "ct_petshop_image_with_text_GTX8fF",
-    "ct_custom_product_carousel_r3JtAC",
-    "ct_custom_all_collection_9qLTng"
+    "ct_custom_product_carousel_gKTFXi"
   ]
 }
