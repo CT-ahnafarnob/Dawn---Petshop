@@ -116,12 +116,72 @@
         "rich_text_color": "#765220",
         "layout_direction": "row"
       }
+    },
+    "ct_custom_all_collection_9qLTng": {
+      "type": "ct-custom-all-collection",
+      "blocks": {
+        "collection_item_Fabwxc": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "new-arrivals-ggblue",
+            "collection_image": "shopify://shop_images/third-grid-1.jpg"
+          }
+        },
+        "collection_item_fkRx4q": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "new-arrivals",
+            "collection_image": "shopify://shop_images/3rd-grid.png"
+          }
+        },
+        "collection_item_R3q7mN": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "demo-collection",
+            "collection_image": "shopify://shop_images/third-grid-3.jpg"
+          }
+        },
+        "collection_item_cxTNeB": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "snow-boards",
+            "collection_image": "shopify://shop_images/grid1.webp"
+          }
+        },
+        "collection_item_GdYqf7": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "new-arrivals"
+          }
+        },
+        "collection_item_zfUMFD": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "all-products"
+          }
+        }
+      },
+      "block_order": [
+        "collection_item_Fabwxc",
+        "collection_item_fkRx4q",
+        "collection_item_R3q7mN",
+        "collection_item_cxTNeB",
+        "collection_item_GdYqf7",
+        "collection_item_zfUMFD"
+      ],
+      "name": "Ct Collection Showcase",
+      "settings": {
+        "header": "Explore the Cuteness!",
+        "header_font_size": 60,
+        "mobile_header_font_size": 20
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
     "ct_petshop_image_with_text_GTX8fF",
-    "ct_custom_product_carousel_wTcYWB"
+    "ct_custom_product_carousel_wTcYWB",
+    "ct_custom_all_collection_9qLTng"
   ]
 }
