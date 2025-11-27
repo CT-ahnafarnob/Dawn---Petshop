@@ -97,7 +97,7 @@
         "layout_direction": "row"
       }
     },
-    "ct_custom_product_carousel_twRV7B": {
+    "ct_custom_product_carousel_wTcYWB": {
       "type": "ct-custom-product-carousel",
       "name": "CT-Product Carousel",
       "settings": {
@@ -106,9 +106,10 @@
         "heading": "Best Sellers",
         "heading_level": "h1",
         "heading_color": "#765220",
+        "image": "shopify://shop_images/second-section-left.jpg",
         "btn_text": "Shop Best Sellers",
         "btn_txt_color": "#ffffff",
-        "btn_url": "",
+        "btn_url": "shopify://collections/new-arrivals",
         "btn_color": "#fa9d72",
         "content": "<p>Take a peek at some of our most popular items! These cute, waterproof bags and accessories are made with the best materials. Our unique designs come in a wide variety of prints and styles, so you can bring your fun fashion sense with you no matter the occasion or give a cute Corgi present to a fellow dog lover!</p>",
         "font_size": 20,
@@ -121,6 +122,6 @@
     "image_banner",
     "featured_collection",
     "ct_petshop_image_with_text_GTX8fF",
-    "ct_custom_product_carousel_twRV7B"
+    "ct_custom_product_carousel_wTcYWB"
   ]
 }
