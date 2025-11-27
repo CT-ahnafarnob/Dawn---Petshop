@@ -16,8 +16,8 @@
   position: relative;
   display: block;
   overflow: hidden;
-  margin: 0;
   padding: 0;
+  margin: 0 -10px;
 }
 .slick-list:focus {
   outline: 0;
@@ -58,6 +58,7 @@
   float: left;
   height: 100%;
   min-height: 1px;
+  margin: 0 10px;
 }
 [dir="rtl"] .slick-slide {
   float: right;
