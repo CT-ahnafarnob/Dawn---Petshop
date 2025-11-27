@@ -1,0 +1,154 @@
+{{ 'CT-custom.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+    assign header = section.settings.header
+    assign desktop_header_font = section.settings.header_font_size
+    assign mobile_header_font = section.settings.mobile_header_font_size
+%}
+<style>
+.{{section.id}} {
+    padding: 10px 40px;
+    background-color: #fff;
+    text-align: center;
+}
+.{{section.id}} h1 {
+  font-size: {{desktop_header_font}};
+  font-weight: 400;
+  line-height: 1;
+  color: #765220;
+}
+.{{section.id}} .collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.{{section.id}} .collection-grid img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.{{section.id}} .collection-grid h3 {
+  font-family: var(--Montserrat-font);
+  color: #765220;
+  font-weight: 800;
+}
+
+@media (max-width:768px){
+    .{{section.id}} .collection-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+}
+}
+@media (max-width:428px){
+    .{{section.id}} .collection-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+}
+}
+</style>
+<section class="{{section.id}}">
+    <div class="content custom-page-width">
+        <h1>{{header}}</h1>
+
+           <div class="collection-grid">
+                {% for block in section.blocks %}
+                    <div class="collection-item">
+                            {% assign collection = collections[block.settings.collection] %}
+                            {% assign image = block.settings.collection_image %}
+                            
+                            {% if collection == blank %}
+                                <h1>Please Select Collection First</h1>
+                            {% else %}
+                                {% if image != blank %}
+                                    <img src="{{ image | image_url }}" alt="{{ collection.title }}" width="100%" height="100%">
+                                {% else %}
+                                    <img src="{{ collection.featured_image | image_url }}" alt="{{ collection.title }}" width="100%" height="100%">
+                                {% endif %}
+                                <h3><a href="{{collection.url}}">{{ collection.title }}</a></h3>
+                            {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "CT Collection Showcase",
+     "disabled_on": {
+      "groups": ["header","footer"]
+    },
+    "settings": [
+        {
+            "type": "header",
+            "content": "Section Settings"
+        },
+        {
+            "type": "text",
+            "id": "header",
+            "label": "Write Header",
+            "default":"Explore the Cuteness!"
+        },
+        {
+                "type": "range",
+                "id": "header_font_size",
+                "min": 30,
+                "max": 70,
+                "step": 1,
+                "unit": "px",
+                "label": "Font size",
+                "default": 60
+        },
+        {
+                "type": "range",
+                "id": "mobile_header_font_size",
+                "min": 12,
+                "max": 24,
+                "step": 1,
+                "unit": "px",
+                "label": "Mobile Font size",
+                "default": 20
+        }
+        
+        ],
+        "blocks": [
+            {
+                "name": "Collection Item",
+                "type": "collection_item",
+                "settings": [
+                    {
+                        "type": "collection",
+                        "id": "collection",
+                        "label": "Choose Collection to Show"
+                        
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "collection_image",
+                        "label": "Upload Your Preferred Image"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Ct Collection Showcase",
+                "category": "Custom Section",
+                 "blocks": [
+                                {
+                                    "type": "collection_item"
+                                },
+                                {
+                                    "type": "collection_item"
+                                },
+                                {
+                                    "type": "collection_item"
+                                }
+                            ]
+            }
+    ]
+}
+{% endschema %}
