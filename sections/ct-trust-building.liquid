@@ -1,0 +1,180 @@
+{{ 'CT-custom.css' | asset_url | stylesheet_tag }}
+{% comment %} {{ 'font-awesome.min.css' | asset_url | stylesheet_tag }} {% endcomment %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+.{{section.id}} {
+        background-color: {{section.settings.bg_color}}
+    }
+.{{section.id}} .trust-section-inner {
+    padding: 50px 60px;
+}
+.icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon i {
+    font-size: 2.5rem;
+    display: inline-block;
+}
+.trust-section-grid {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 30px;
+}
+</style>
+
+<Section class="{{section.id}}">
+    
+    <div class="trust-section">
+        <div class="trust-section-inner">
+             <div class="trust-section-grid">
+            {% for block in section.blocks %}
+            <div class="trust-section-items">
+                {% liquid
+                    assign icon = block.settings.icon
+                    assign title = block.settings.title
+                    assign title_level = block.settings.title_level
+                    assign title_color = block.settings.title_color
+                    assign title_color = block.settings.title_color
+                    assign description = block.settings.description
+                    assign description_color = block.settings.description_color
+                    assign font_size = block.settings.font_size
+                %}
+
+                
+                {% if icon != blank %}
+                        <div class="icon">
+                            <i class="{{icon}}"></i>
+                        </div>
+                    {% endif %}
+                {% if title != blank %}
+                    <{{title_level}} style="color: {{title_color}}; font-family:var(--Montserrat-font)"> {{title}} </{{title_level}}>
+                {% endif %}
+                {% if description != blank %}
+                    <div style="color: {{description_color}}; font-size:{{font_size}}px;">
+                            <p >{{description}}</p>
+                    </div>
+                {% endif %}
+                    </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+</Section>
+
+{% schema %}
+    {
+        "name": "Custom Trust-Building",
+        "disabled_on": {
+            "groups": ["footer","header"]
+        },
+        "settings": [
+            {
+                "type": "color",
+                "id": "bg_color",
+                "label": "Background Color",
+                "default": "#ffdcbd"
+            }
+        ],
+        "blocks":
+                [
+                    {
+                        "name": "Trust Builing Items",
+                        "type": "trust_builing_items",
+                        "settings": 
+                        [
+                            {
+                                "type": "select",
+                                "id": "icon",
+                                "label": "Choose Icon",
+                                "options": [
+                                        { "value": "fas fa-handshake", "label": "Heart" },
+                                        { "value": "fas fa-truck", "label": "Truck" },
+                                        { "value": "fas fa-shield", "label": "Shield" },
+                                        { "value": "fas fa-star", "label": "Star" },
+                                        { "value": "fas fa-gift", "label": "Gift" },
+                                        { "value": "fas fa-clock", "label": "Clock" },
+                                        { "value": "fas fa-check", "label": "Checkmark" },
+                                        { "value": "fas fa-box", "label": "Box" },
+                                        { "value": "fas fa-lock", "label": "Lock" },
+                                        { "value": "fas fa-leaf", "label": "Leaf" },
+                                        { "value": "fas fa-smile", "label": "Smile" },
+                                        { "value": "fas fa-bolt", "label": "Bolt" },
+                                        { "value": "fas fa-crown", "label": "Crown" },
+                                        { "value": "fas fa-rocket", "label": "Rocket" }
+                                ],
+                                "default": "fas fa-handshake"
+                            },
+                            {
+                                "type": "text",
+                                "id": "title",
+                                "label": "Write Title",
+                                "default" :"Crafted With Love"
+                            },
+                            {
+                                "type": "select",
+                                "id": "title_level",
+                                "label": "Title level",
+                                "default": "h1",
+                                "options": 
+                                [
+                                    { "value": "h1", "label": "H1" },
+                                    { "value": "h2", "label": "H2" },
+                                    { "value": "h3", "label": "H3" },
+                                    { "value": "h4", "label": "H4" },
+                                    { "value": "h5", "label": "H5" },
+                                    { "value": "h6", "label": "H6" }
+                                ]
+                            },
+                            {
+                                "type": "color",
+                                "id": "title_color",
+                                "label": "Heading color",
+                                "default":"#765220"
+                            },
+                            {
+                                "type": "header",
+                                "content": "Description Typography"
+                            },
+                            {
+                                    "type": "richtext",
+                                    "id": "description",
+                                    "label": "Write Description",
+                                    "default":"<p>All bags are exquisitely handmade by professional sewers that dedicate perfection into every stitch.</p>"
+                            },
+                            {
+                                    "type": "range",
+                                    "id": "font_size",
+                                    "min": 12,
+                                    "max": 24,
+                                    "step": 1,
+                                    "unit": "px",
+                                    "label": "Font size",
+                                    "default": 20
+                            },
+                            {
+                                    "type": "color",
+                                    "id": "description_color",
+                                    "label": "Description text color",
+                                    "default":"#765220"
+                            }                 
+
+                        ]
+                    }
+                ],
+                "presets": [
+                    {
+                        "name": "CT-Trust Building",
+                        "category" : "Custom Section"
+                    }
+                ]
+    }   
+{% endschema %}
