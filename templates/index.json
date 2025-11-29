@@ -90,9 +90,9 @@
         "content": "<p>Bags and accessories made to make you smile!</p>",
         "font_size": 20,
         "rich_text_color": "#765220",
-        "btn_text": "",
+        "btn_text": "shop now",
         "btn_txt_color": "#ffffff",
-        "btn_url": "",
+        "btn_url": "shopify://collections/new-arrivals",
         "btn_color": "#fa9d72",
         "layout_direction": "row"
       }
@@ -217,6 +217,56 @@
         "layout_direction": "row"
       }
     },
+    "ct_trust_building_N3UTCz": {
+      "type": "ct-trust-building",
+      "blocks": {
+        "trust_builing_items_KDpKEN": {
+          "type": "trust_builing_items",
+          "settings": {
+            "icon": "fas fa-handshake",
+            "title": "Crafted With Love",
+            "title_level": "h2",
+            "title_color": "#765220",
+            "description": "<p>All bags are exquisitely handmade by professional sewers that dedicate perfection into every stitch.</p>",
+            "font_size": 20,
+            "description_color": "#765220"
+          }
+        },
+        "trust_builing_items_mt6YhN": {
+          "type": "trust_builing_items",
+          "settings": {
+            "icon": "fas fa-truck",
+            "title": "Free Shipping Available",
+            "title_level": "h2",
+            "title_color": "#765220",
+            "description": "<p>Receive your package in a quick, timely manner. Get free shipping when your order is over $35!</p>",
+            "font_size": 20,
+            "description_color": "#765220"
+          }
+        },
+        "trust_builing_items_fckYWm": {
+          "type": "trust_builing_items",
+          "settings": {
+            "icon": "fas fa-star",
+            "title": "Our Guarantee",
+            "title_level": "h2",
+            "title_color": "#765220",
+            "description": "<p>Our #1 priority is your happiness! We offer returns or exchanges on all of our products. Shop confidently.</p>",
+            "font_size": 20,
+            "description_color": "#765220"
+          }
+        }
+      },
+      "block_order": [
+        "trust_builing_items_KDpKEN",
+        "trust_builing_items_mt6YhN",
+        "trust_builing_items_fckYWm"
+      ],
+      "name": "CT-Trust Building",
+      "settings": {
+        "bg_color": "#ffdcbd"
+      }
+    },
     "ct_petshop_image_with_text_rFzVqi": {
       "type": "ct-petshop-image-with-text",
       "name": "CT-Image with Text",
@@ -246,6 +296,7 @@
     "ct_custom_all_collection_JFNQM7",
     "ct_custom_product_carousel_mJaC6X",
     "ct_petshop_image_with_text_ccYYRP",
+    "ct_trust_building_N3UTCz",
     "ct_petshop_image_with_text_rFzVqi"
   ]
 }
