@@ -17,7 +17,7 @@
     justify-content: center;
 }
  .{{section.id}} .icon i {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     display: inline-block;
 }
  .{{section.id}} .trust-section-grid {
@@ -44,7 +44,7 @@
                 {% liquid
                     assign icon = block.settings.icon
                     assign title = block.settings.title
-                    assign title_level = block.settings.title_level
+                    assign title_level = block.settings.title_level | default: 'h2'
                     assign title_color = block.settings.title_color
                     assign title_color = block.settings.title_color
                     assign description = block.settings.description
@@ -59,7 +59,7 @@
                         </div>
                     {% endif %}
                 {% if title != blank %}
-                    <{{title_level}} style="color: {{title_color}}; font-family:var(--Montserrat-font)"> {{title}} </{{title_level}}>
+                    <{{title_level}} style="color: {{title_color}}; font-family:var(--Montserrat-font); font-weight: bold;"> {{title}} </{{title_level}}>
                 {% endif %}
                 {% if description != blank %}
                     <div style="color: {{description_color}}; font-size:{{font_size}}px;">
