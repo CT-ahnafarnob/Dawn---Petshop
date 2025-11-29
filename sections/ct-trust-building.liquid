@@ -9,23 +9,28 @@
 .{{section.id}} .trust-section-inner {
     padding: 50px 60px;
 }
-.icon {
+ .{{section.id}} .icon {
     font-size: 2.5rem;
     margin-bottom: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.icon i {
+ .{{section.id}} .icon i {
     font-size: 2.5rem;
     display: inline-block;
 }
-.trust-section-grid {
+ .{{section.id}} .trust-section-grid {
     display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   gap: 30px;
+}
+@media (max-width:768px) {
+    .{{section.id}} .trust-section-grid {
+        flex-direction: column;
+}
 }
 </style>
 
@@ -173,7 +178,19 @@
                 "presets": [
                     {
                         "name": "CT-Trust Building",
-                        "category" : "Custom Section"
+                        "category" : "Custom Section",
+                         "blocks": [
+                                {
+                                    "type": "trust_builing_items"
+                                },
+                                {
+                                    "type": "trust_builing_items"
+                                },
+                                {
+                                    "type": "trust_builing_items"
+                                }
+                                
+                         ]
                     }
                 ]
     }   
